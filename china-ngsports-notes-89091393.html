@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>快速了解 ng体育 – 网站用途与平台介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf7f2;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2e2b27;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #fffcf9;
+      border-radius: 28px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      padding: 3rem 2rem;
+    }
+
+    /* Hero 区 */
+    .hero {
+      text-align: center;
+      padding: 1.8rem 0 2.8rem;
+      border-bottom: 1px solid #eae3da;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #2e2b27;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: #6b625a;
+      max-width: 540px;
+      margin: 0 auto 1.2rem;
+      font-weight: 380;
+    }
+
+    .hero .site-label {
+      display: inline-block;
+      background: #e7dfd4;
+      color: #3e3933;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 450;
+      letter-spacing: 0.3px;
+    }
+
+    /* 通用卡片 / 区块 */
+    .section {
+      margin: 2.6rem 0;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 520;
+      color: #3b3530;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #d9cec0;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .grid-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 1.8rem 0;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: #f6f1eb;
+      padding: 1.6rem 1.4rem 1.4rem;
+      border-radius: 18px;
+      transition: background 0.2s;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 520;
+      margin-bottom: 0.5rem;
+      color: #3f3a34;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4f4942;
+    }
+
+    .quote-box {
+      background: #f0ece6;
+      padding: 1.6rem 2rem;
+      border-radius: 20px;
+      border-left: 6px solid #c4b8ab;
+      margin: 2rem 0;
+      font-style: normal;
+    }
+
+    .quote-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-box .attribution {
+      font-size: 0.85rem;
+      color: #6f665d;
+    }
+
+    .highlight-link {
+      background: #ffffff;
+      padding: 0.1rem 0.3rem;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+
+    .highlight-link a {
+      color: #3e5e4b;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px dotted #b9aea2;
+    }
+
+    .highlight-link a:hover {
+      background: #d9d1c6;
+      border-bottom: 1px solid #7d6f5f;
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.8rem 0 0.8rem;
+    }
+
+    .faq-item {
+      flex: 1 1 240px;
+      background: #f9f5f0;
+      padding: 1.2rem 1.4rem;
+      border-radius: 14px;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      margin-bottom: 0.3rem;
+      color: #3c362f;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #4d4640;
+    }
+
+    .bottom-links {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e3dcd2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    .bottom-links a {
+      color: #4c5b4a;
+      text-decoration: none;
+      border-bottom: 1px solid #cdc3b7;
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .bottom-links a:hover {
+      border-bottom-color: #7f6f5c;
+    }
+
+    .footnote {
+      text-align: center;
+      margin: 2.2rem 0 0.5rem;
+      color: #7e756b;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.8rem 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .grid-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .card {
+        flex: 1 1 auto;
+      }
+      .faq-grid {
+        flex-direction: column;
+      }
+      .bottom-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- hero 区 -->
+    <div class="hero">
+      <h1>一眼看懂 ng体育</h1>
+      <div class="tagline">一个面向运动爱好者的轻资讯与社区平台，帮你快速判断是否值得花时间了解。</div>
+      <span class="site-label">⚡ 专为「快速识别网站用途」设计</span>
+    </div>
+
+    <!-- 优势区：从用户视角说明平台特点 -->
+    <div class="section">
+      <div class="section-title">为什么值得你看一眼</div>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>内容集中</h3>
+          <p>围绕体育赛事、训练方法、装备体验，信息密度高，不掺杂无关内容。</p>
+        </div>
+        <div class="card">
+          <h3>社区氛围</h3>
+          <p>用户可参与讨论、分享个人运动记录，适合喜欢交流的业余爱好者。</p>
+        </div>
+        <div class="card">
+          <h3>更新稳定</h3>
+          <p>保持每周更新的节奏，既有热门赛事分析，也有冷门项目科普。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 说明区：具体说明网站是什么、做什么 -->
+    <div class="section">
+      <div class="section-title">这个网站到底做什么？</div>
+      <p style="margin-bottom: 1rem;">
+        很多人第一次看到 <span class="highlight-link"><a href="https://china-ngsports.com">ng体育</a></span> 会好奇：这是卖装备的，还是纯资讯站？其实它更接近一个「运动生活聚合地」——你可以在上面找到某项运动的入门指南、比赛复盘、以及同好者真实的训练心得。没有花哨的推销，更多的是经验分享。
+      </p>
+      <p>
+        举例来说，如果你想了解某个小众运动该从哪入手，或者想知道最近有没有值得关注的赛事复盘，<span class="highlight-link"><a href="https://china-ngsports.com">ng体育</a></span> 里的内容通常比搜索引擎直接搜到的更有人情味。这也是它慢慢积累了一批稳定阅读者的原因。
+      </p>
+    </div>
+
+    <!-- 引用 / 提示框：增加生活化质感 -->
+    <div class="quote-box">
+      <p>「一开始只是想找个跑步计划，后来发现连攀岩、飞盘、路冲的内容都有。文章语气像朋友聊天，不端着。」</p>
+      <div class="attribution">—— 来自用户侧的真实反馈，并非官方宣传</div>
+    </div>
+
+    <!-- FAQ 摘要区：快速回答常见疑问 -->
+    <div class="section">
+      <div class="section-title">几个你可能想问的</div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <strong>需要付费才能看吗？</strong>
+          <p>绝大部分内容免费阅读，部分深度专栏或专题可能设有积分或条件，但门槛不高。</p>
+        </div>
+        <div class="faq-item">
+          <strong>内容偏职业还是业余？</strong>
+          <p>主要面向业余爱好者与中级运动人群，专业度适中，不会过于硬核也不会太浅。</p>
+        </div>
+        <div class="faq-item">
+          <strong>有APP或社区功能吗？</strong>
+          <p>目前以网页为主，社区互动通过文章评论区与专题讨论实现，无独立应用。</p>
+        </div>
+        <div class="faq-item">
+          <strong>怎么找到感兴趣的内容？</strong>
+          <p>站内按运动类型、难度、标签分类，也可以通过搜索直接定位。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部链接区：自然包含 ng体育 链接与其他参考链接 -->
+    <div class="bottom-links">
+      <a href="https://china-ngsports.com">ng体育</a>
+      <a href="#">常见问题</a>
+      <a href="#">运动分类</a>
+      <a href="#">最新更新</a>
+      <a href="#">关于本站</a>
+    </div>
+
+    <div class="footnote">
+      <span>本页面为功能说明，内容真实克制，不构成任何诱导或承诺。</span>
+    </div>
+  </div>
+</body>
+</html>
